@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div>
+        <%-include('partials/navbar', {page: '/'})%>
+
+        <div class="container mx-auto">
+            <div class="hero">
+                <div class="hero-content text-center">
+                    <h1 class="text-5xl font-bold">Explore the LEGO Collection</h1>
+                    <p class="py-6">Discover amazing LEGO sets and start building!</p>
+                    <a href="/lego/sets" class="btn btn-primary hover:text-gray-400">See All Sets</a>
+                </div>
+            </div>
+        
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+                <div class="card shadow-xl">
+                    <figure><img src="https://cdn.rebrickable.com/media/sets/01-1.jpg" alt="Chain Links" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Chain Links</h2>
+                        <p>Amazing Bracelet built by using Lego and one of the earliest version of Lego</p>
+                        <div class="card-actions justify-end">
+                            <a href="/lego/sets/01-1" class="btn btn-secondary hover:text-gray-400">View Set</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-xl">
+                    <figure><img src="https://cdn.rebrickable.com/media/sets/028-1.jpg" alt="Nursery Furniture" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Nursery Furniture</h2>
+                        <p>Little Playhouse by Lego</p>
+                        <div class="card-actions justify-end">
+                            <a href="/lego/sets/028-1" class="btn btn-secondary hover:text-gray-400">View Set</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-xl">
+                    <figure><img src="https://cdn.rebrickable.com/media/sets/010423-1.jpg" alt="The Majestic Horse" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">The Majestic Horse</h2>
+                        <p>Amazing hourse built by using Lego</p>
+                        <div class="card-actions justify-end">
+                            <a href="/lego/sets/010423-1" class="btn btn-secondary hover:text-gray-400">View Set</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="hero bg-base-200 text-primary-content py-8"> 
+    <div class="container mx-auto">
+      <h1></h1><p></p>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4"> 
+    <%- include('partials/navbar', { page: '' }) %>
+
+    <section class="set-details mt-6"> 
+      <img src="<%= set.img_url %>" alt="<%= set.name %>" class="w-1/2 mx-auto rounded-lg object-cover"> 
+      <h2 class="text-2xl font-semibold mt-4"><%= set.name %></h2>
+      <p>Year: <%= set.year %></p>
+      <p>Theme: <%= set.theme %></p>
+      <p>Parts: <%= set.num_parts %></p>
+    </section>
+
+    <div id="quote-container" class="quote border border-base-300 p-6 mt-6 rounded-lg"> 
+      <p id="quote-content" class="text-lg italic"></p> 
+      <p id="quote-author" class="font-bold"></p> 
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('https://quotable.io/random')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('quote-content').textContent = data.content;
+                    document.getElementById('quote-author').textContent = "- " + data.author;
+                });
+        });
+    </script>
+
+    <a href="#" onclick="history.back(); return false;" class="btn btn-primary mt-4 hover:text-gray-400">Back</a> 
+  </main>
+</body>
+</html>
