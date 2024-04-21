@@ -18,8 +18,12 @@
       <img src="<%= set.img_url %>" alt="<%= set.name %>" class="w-1/2 mx-auto rounded-lg object-cover"> 
       <h2 class="text-2xl font-semibold mt-4"><%= set.name %></h2>
       <p>Year: <%= set.year %></p>
-      <p>Theme: <%= set.theme %></p>
+      <p>Theme: <%= set.Theme.name %></p>
       <p>Parts: <%= set.num_parts %></p>
+      <% if (session.user) { %> 
+      <div class="mt-4"> <a href="/lego/editSet/<%= set.set_num %>" class="btn btn-secondary mt-4">Edit</a>
+      </div>
+      <% } %> 
     </section>
 
     <div id="quote-container" class="quote border border-base-300 p-6 mt-6 rounded-lg"> 
